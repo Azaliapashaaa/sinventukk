@@ -8,7 +8,7 @@ return new class extends Migration
     public function up(): void
     {
         // Comment out or remove the entire 'up' method
-        /*
+
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
             $table->string('merk', 50)->nullable();
@@ -23,7 +23,7 @@ return new class extends Migration
 
             $table->timestamps();
         });
-        */
+
     }
 
     public function down(): void
