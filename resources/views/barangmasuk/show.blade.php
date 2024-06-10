@@ -1,0 +1,24 @@
+@extends('layouts.adm-main')
+
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Detail Barang Masuk</div>
+
+                    <div class="card-body">
+                        <p><strong>Nama Barang:</strong> {{ $barangMasuk->barang->merk }}</p>
+                        <p><strong>Tanggal Masuk:</strong> {{ $barangMasuk->tgl_masuk }}</p>
+                        <p><strong>Jumlah Masuk:</strong> {{ $barangMasuk->qty_masuk }}</p>
+
+                        <!-- You can display other details here -->
+                        <div class="text-center">
+                        <a href="{{ route('barangmasuk.index') }}" class="btn btn-primary">Kembali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
