@@ -12,7 +12,7 @@ use App\Http\Controllers\ProductController;
 
 // Default welcome route
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 // Resource routes
