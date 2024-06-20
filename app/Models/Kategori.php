@@ -1,5 +1,6 @@
-<?php
+<?php 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -15,13 +16,7 @@ class Kategori extends Model
     public static function getKategoriAll()
     {
         return DB::table('kategori')
-            ->select('kategori.id', 'deskripsi')
-            ->selectRaw('CASE 
-                            WHEN kategori = "M" THEN "Barang Modal"
-                            WHEN kategori = "A" THEN "Alat"
-                            WHEN kategori = "BHP" THEN "Bahan Habis Pakai"
-                            WHEN kategori = "BTHP" THEN "Bahan Tidak Habis Pakai"
-                            ELSE "Unknown"
-                       END as ketkategorik');
+            ->select('kategori.id', 'deskripsi', DB::raw('ketKategori(kategori) as ketkategori'), 'kategori')
+            ->get();
     }
 }
