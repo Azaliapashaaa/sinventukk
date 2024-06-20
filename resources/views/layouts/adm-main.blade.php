@@ -132,11 +132,7 @@
                 <a class="nav-link" href="barang">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Barang</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="products">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Product</span></a>
+
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="barangmasuk">
